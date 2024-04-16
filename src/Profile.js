@@ -1,4 +1,5 @@
 import React from 'react'
+import ProfileName from './ProfileName'
 
 const Profile = () => {
   return (
@@ -6,6 +7,7 @@ const Profile = () => {
       <div className="profileBackground"></div>
       <div className="profileImageContainer">
         <div className="profileImage"></div>
+        <ProfileName />
       </div>
     </div>
   )
