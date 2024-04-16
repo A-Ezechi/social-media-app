@@ -1,5 +1,6 @@
 import React from 'react'
 import ProfileName from './ProfileName'
+import SocialFeed from './SocialFeed'
 
 const Profile = () => {
   return (
@@ -7,8 +8,9 @@ const Profile = () => {
       <div className="profileBackground"></div>
       <div className="profileImageContainer">
         <div className="profileImage"></div>
-        <ProfileName />
+        <ProfileName />    
       </div>
+      <SocialFeed />
     </div>
   )
 }

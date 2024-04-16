@@ -144,3 +144,10 @@
   align-items: center;
   gap: 1rem;
 }
+
+/* FEED */
+
+.socialFeed{
+  width: 100%;
+  border: 1px solid black; 
+}
