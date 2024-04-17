@@ -148,6 +148,63 @@
 /* FEED */
 
 .socialFeed{
+  max-width: 45vw;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  border: 1px solid black;
+  box-shadow: 1px 1px 5px;
+  padding: 1.5rem;
+  margin-left: 2rem;
+  margin-top: 2rem;
+}
+
+.newPostContainer{
+  display: flex;
   width: 100%;
-  border: 1px solid black; 
+  gap: 2rem;
+}
+
+.newPostImage{
+  width: 130px;
+  height: 110px;
+  border-radius: 50%;
+  border: 1px solid black;
+  background-color: whitesmoke;
+}
+
+.newPostText{
+  width: 100%;
+  height: 100px;
+  /* border-bottom: 1px solid black; */
+  padding: 1rem;
+}
+
+.newPost{
+  width: 100%;
+  height: 100px;
+  padding: 1rem;
+  margin-top: -1rem;
+  margin-left: -1rem;
+  border: none;
+  border-bottom: 1px solid black;
+  font-size: large;
+}
+
+.uploadLinks{
+  display: flex;
+  gap: 4rem;
+  align-items: center;
+  margin-top: -1rem;
+}
+
+.post{
+  width: 100px;
+  height: 40px;
+  border-radius: 10px;
+  background-color: rgb(2, 131, 58);
+  font-size: medium;
+  color: whitesmoke;
+  font-weight: bolder;
+  margin-left: 4rem;
 }
