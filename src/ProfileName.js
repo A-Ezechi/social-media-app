@@ -1,6 +1,7 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
 import axios from 'axios';
+import UserInformation from './UserInformation';
 
 const ProfileName = () => {
    const [userName, setUserName] = useState('testing');
@@ -24,6 +25,9 @@ const ProfileName = () => {
     <div className='profileName'>
         {<h1>{userName}</h1>}
         {<p>{userIntro}</p>}
+        <div className="userLocation">
+            <UserInformation />
+        </div>
     </div>
   )
 }

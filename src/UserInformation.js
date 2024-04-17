@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import React from 'react'
 import axios from 'axios'
 
@@ -8,17 +8,20 @@ const UserInformation = () => {
 
     const getUserLocation = async () => {
         try {
-            const res = await axios.get('https://ipapi.co/json/')
-            setUserCity(res.data.city)
-            setUserCountry(res.data.country)
+            const results = await axios.get('/api/data.json')
+            setUserCity(results.data.users[0].City)
+            setUserCountry(results.data.users[0].Country)
         } catch (error) {
             console.log(error)
         }
     }
 
-  return (
-    <div>UserInformation
+    getUserLocation()
 
+  return (
+    <div className='userInformation'>
+        {<p>City: {userCity}</p>}
+        {<p>Country: {userCountry}</p>}
     </div>
   )
 }

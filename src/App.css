@@ -117,7 +117,7 @@
   color: white;
 }
 
-/* MAIN CONTENT */
+/* PROFILE */
 
 .profileBackground{
   background-image: url(/public/img/vecteezy_natural-landscape-of-green-field-with-ai-generated_22697991.jpg);
@@ -143,6 +143,19 @@
   justify-content: center;
   align-items: center;
   gap: 1rem;
+}
+
+.profileName{
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-left: 5rem;
+}
+
+.userInformation{
+  display: flex;
+  gap: 1rem;
+  margin-left: -4rem;
 }
 
 /* FEED */
