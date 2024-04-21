@@ -19,10 +19,13 @@ const Accounts = () => {
 
   return (
     <div className='connectedAccountsContainer'>
+        <h2 className='accountsHeader'>Online Friends</h2>
       {accounts.map((account, index) => (
         <div key={index} className='connectedAccounts'>
-          <button className="newPostImage">{account.name}</button>
-          <h2>{account.name}</h2>
+        <div className="innerAccountsContainer">
+            <button className="newPostImage">{account.name}</button>
+            <h2>{account.name}</h2>
+          </div>
         </div>
       ))}
     </div>
@@ -30,3 +33,6 @@ const Accounts = () => {
 };
 
 export default Accounts;
+
+
+// CHANGE THIS TO ONLINE FRIENDS RATHER THAN LOGGED ACCOUNTS
