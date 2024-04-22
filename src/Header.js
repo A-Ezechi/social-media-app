@@ -28,12 +28,12 @@ const Header = () => {
 
         const filteredUsers = users.filter(user => user.name === search.trim());
         return (
-            <div>
+            <div className='filteredResults'>
                 {filteredUsers.length > 0 ? (
                     filteredUsers.map(user => (
                         <div key={user.id} className='foundAccounts'>
-                            <button className="newPostImage">{user.name}</button>
-                            <h2>{user.name}</h2>
+                            <button className="filteredImage">{user.name}</button>
+                            <h2 className='filteredName'>{user.name}</h2>
                         </div>
                     ))
                 ) : (

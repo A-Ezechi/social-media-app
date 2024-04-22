@@ -57,6 +57,41 @@
   height: 30px;
 }
 
+.filteredResults{
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  position: absolute;
+  left: 37vw;
+  top: 7vh;
+  background-color: rgba(255, 255, 255, 0.874);
+  width: 30vw;
+  border: 1px solid black;
+  padding: 1rem;
+  z-index: 1;
+}
+
+.foundAccounts{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.filteredImage{
+  width: 80px;
+  height: 70px;
+  border-radius: 50%;
+  border: 1px solid black;
+  background-color: whitesmoke;
+  padding: 1rem;
+}
+
+.filteredName{
+  font-size: larger;
+}
+
 /* CONTENT */
 
 .Content{
@@ -73,7 +108,10 @@
   display: flex;
   flex-direction: row;
   gap: 10rem;
+}
 
+button:hover{
+  cursor: pointer;
 }
 
 /* SIDE LINKS */
@@ -255,6 +293,7 @@
   border: 1px solid black;
   padding: 2rem;
   box-shadow: 1px 1px 5px;
+  margin-top: 1.9rem;
 }
 
 .accountsHeader{

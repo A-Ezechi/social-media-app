@@ -4,7 +4,6 @@ const SocialFeed = () => {
 
   return (
     <div className='socialFeed'>
-        {/* <div className="newPostOuterContainer"> */}
             <div className="newPostContainer">
                 <div className="newPostImage"></div>
                 <div className="newPostText">
@@ -23,7 +22,6 @@ const SocialFeed = () => {
                 <a href="">LinkedIn</a>
                 <button className="post">Post</button>
             </nav>
-        {/* </div> */}
     </div>
   )
 }
