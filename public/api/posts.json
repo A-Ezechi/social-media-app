@@ -1,0 +1,29 @@
+{
+    "posts": [
+      {
+        "id": 1,
+        "name": "John Doe",
+        "post": "This is my first post!"
+      },
+      {
+        "id": 2,
+        "name": "Jane Doe",
+        "post": "This is my second post!"
+      },
+      {
+        "id": 3,
+        "name": "John Doe",
+        "post": "I love Coding"
+      },
+      {
+        "id": 4,
+        "name": "Alex Ezechi",
+        "post": "I love Coding too!"
+      },
+      {
+        "id": 5,
+        "name": "Jay Jay Okocha",
+        "post": "This is amazing!"
+      }
+    ]
+  }
