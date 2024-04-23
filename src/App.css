@@ -278,9 +278,9 @@ button:hover{
   display: flex;
   flex-direction: column;
   gap: 3rem;
-  background-color: aliceblue;
   padding: 20px;
   border: 1px solid black;
+  box-shadow: 1px 1px 5px;
   margin-left: 2rem;
   margin-top: 1rem;
   height: 100%;
@@ -290,7 +290,9 @@ button:hover{
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  border-bottom: 1px solid black;
+  border: 1px solid black;
+  box-shadow: 1px 1px 2px;
+  padding: 10px;
 }
 
 /* ACCOUNTS */
