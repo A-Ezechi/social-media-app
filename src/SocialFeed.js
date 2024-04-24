@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react'
 import axios from 'axios'
 
 const SocialFeed = () => {
-  const [newPost, setNewPost] = useState([])
+  const [newPost, setNewPost] = useState('')
   const [displayPosts, setdisplayPosts] = useState([])
 
 // Fetching posts from the server
@@ -18,22 +18,24 @@ const SocialFeed = () => {
     }
   }
 
-
 // Posting new posts to the server by creating a new post array and updating the displayPosts state
 
   const handleSubmit = async (e) => {
     const post = newPost;
-    const updatedPosts = [...displayPosts]
+    const updatedPosts = [...displayPosts];
+    e.preventDefault();
 
-    updatedPosts.unshift({name: 'Alex Ezechi', post: post})
-    setdisplayPosts(updatedPosts)
+     if (post.length > 0)
+      {updatedPosts.unshift({name: 'Alex Ezechi', post: post})
+        setdisplayPosts(updatedPosts);
+        setNewPost('');
+      } else { alert('Post cannot be empty!');}
 
-    setNewPost('')
-
-    e.preventDefault()
-    console.log(`Publishing post: ${post}`)
-    console.log(displayPosts)
+    console.log(`Publishing post: ${post}`);
+    console.log(displayPosts);
   }
+
+
 
 // Using the useEffect hook to fetch posts from the server when the component mounts
 
