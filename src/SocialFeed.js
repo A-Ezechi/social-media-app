@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react'
 import axios from 'axios'
 
 const SocialFeed = () => {
-  const [newPost, setNewPost] = useState('')
+  const [newPost, setNewPost] = useState([])
   const [displayPosts, setdisplayPosts] = useState([])
 
 // Fetching posts from the server
@@ -20,7 +20,7 @@ const SocialFeed = () => {
 
 // Posting new posts to the server by creating a new post array and updating the displayPosts state
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     const post = newPost;
     const updatedPosts = [...displayPosts];
     e.preventDefault();
@@ -33,6 +33,7 @@ const SocialFeed = () => {
 
     console.log(`Publishing post: ${post}`);
     console.log(displayPosts);
+    console.log(newPost);
   }
 
 
@@ -55,6 +56,7 @@ const SocialFeed = () => {
                       <input type="text" 
                       placeholder= "What's on your mind?"
                       className='newPost'
+                      value={newPost}
                       onChange={(e) => setNewPost(e.target.value)}
                       />
                   </form>
