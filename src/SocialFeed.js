@@ -74,7 +74,7 @@ const SocialFeed = () => {
               </nav>
       </div>
 
-      <div className="postsFeed">Post Feed
+      <div className="postsFeed">
       {
         displayPosts.map((posts) => (
           <div className="newFeed">

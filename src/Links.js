@@ -1,4 +1,5 @@
 import React from 'react'
+import LinkedAccounts from './LinkedAccounts'
 
 const Links = () => {
     
@@ -16,6 +17,8 @@ const Links = () => {
         </nav>
 
         <div className="linksLine"></div>
+        <LinkedAccounts />
+
     </div>
   )
 }

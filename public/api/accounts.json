@@ -1,0 +1,16 @@
+{
+    "linkedAccounts": [
+        {
+            "id": 1,
+            "name": "Alex Ezechi"
+        },
+        {
+            "id": 2,
+            "name": "Cindy Brown"
+        },
+        {
+            "id": 3,
+            "name": "Johnathon Smith"
+        }
+    ]
+}
