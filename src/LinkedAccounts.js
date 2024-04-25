@@ -8,12 +8,19 @@ const LinkedAccounts = () => {
 
     const fetchAccounts = async () => {
         try {
-            const accountsList = await axios.get('/api/accounts.json')
-            setAccounts(accountsList.data)
+          const response = await axios.get('/api/accounts.json');
+          const fetchedData = response.data;
+      
+          if (Array.isArray(fetchedData.linkedAccounts)) {
+            setAccounts(fetchedData.linkedAccounts);
+          } else {
+            console.error('Data fetched is not an array:', fetchedData);
+          }
         } catch (error) {
-            console.log(`Failed to fetch accounts: ${error}`)
+          console.error('Failed to fetch accounts:', error);
         }
-    }
+      };
+      
 
     const handleAccountChange = (e) => {
         e.preventDefault()
