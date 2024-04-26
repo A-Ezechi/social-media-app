@@ -241,7 +241,6 @@ button:hover{
 .newPostText{
   width: 100%;
   height: 100px;
-  /* border-bottom: 1px solid black; */
   padding: 1rem;
 }
 
@@ -321,4 +320,55 @@ button:hover{
   width: 100%;
   text-align: center;
   margin-bottom: 1rem;
+}
+
+/* LINKED ACCOUNTS */
+
+.linkedAccounts{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+
+.linkedAccountsHeader{
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.linkedAccountsImg{
+  width: 70px;
+  height: 60px;
+  border-radius: 50%;
+  border: 1px solid black;
+  background-color: whitesmoke;
+}
+
+.linkedAccountsName{
+  font-size: large;
+  font-style: oblique;
+  letter-spacing: 2px;
+  width: 90%;
+  text-align: end;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid black;
+}
+
+.connectedAccountsContainer1{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.connectedAccountsOuterContainer1{
+  width: 95%;
+  border-radius: 5px;
+}
+
+.connectedAccountsOuterContainer1:hover{
+  background-color: rgba(245, 245, 245, 0.852);
 }

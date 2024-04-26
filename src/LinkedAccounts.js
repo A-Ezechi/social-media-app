@@ -40,9 +40,16 @@ const LinkedAccounts = () => {
 
   return (
     <div className='linkedAccounts'>
+        <h3 className='linkedAccountsHeader'>Linked Accounts</h3>
         {accounts.map((account) => (
-            <div className='connectedAccounts' key={account.id}>
-                <button onClick={handleAccountChange}>{account.name}</button>
+            <div className="connectedAccountsOuterContainer1">
+                <div className='connectedAccountsContainer1' key={account.id}>
+                    <div className="linkedAccountsImg"></div>
+                    <button 
+                    onClick={handleAccountChange}
+                    className='linkedAccountsName'
+                    >{account.name}</button>
+                </div>
             </div>
         
         ))} 
