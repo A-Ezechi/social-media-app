@@ -31,12 +31,13 @@ const SocialFeed = () => {
         setNewPost('');
       } else { alert('Post cannot be empty!');}
 
+// Make it so that the post first gets the users ID and then renders the name based on the users ID
+// This will then be changeable based on the user's ID from the connectedAccounts
+
     console.log(`Publishing post: ${post}`);
     console.log(displayPosts);
     console.log(newPost);
   }
-
-
 
 // Using the useEffect hook to fetch posts from the server when the component mounts
 

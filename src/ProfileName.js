@@ -16,6 +16,9 @@ const ProfileName = () => {
        console.error(error);
     }
 }
+
+// This function will most likely need to go 
+
  useEffect(() => {
     fetchProfileName();
 }, []);
