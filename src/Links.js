@@ -18,8 +18,11 @@ const Links = () => {
 
         <div className="linksLine"></div>
         <LinkedAccounts />
-
     </div>
+
+// Could possibly look into adding code to the edit buton so once clicked it will allow you to choose the links you want to remove.
+// This will need to be done by adding id's to the links and then removing them from the array of links.
+// NOT IMPORTANT FOR NOW
   )
 }
 

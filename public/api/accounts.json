@@ -2,15 +2,27 @@
     "linkedAccounts": [
         {
             "id": 1,
-            "name": "Alex Ezechi"
+            "name": "Alex Ezechi",
+            "intro": "I am a Web developer",
+            "image": "https://res.cloudinary.com/alexoc/image/upload/v1566550004/alexoc.jpg",
+            "City": "London",
+            "Country": "United Kingdom"
         },
         {
             "id": 2,
-            "name": "Cindy Brown"
+            "name": "Cindy Brown",
+            "intro": "I am a Claims Officer",
+            "image": "https://res.cloudinary.com/alexoc/image/upload/v1566550004/alexoc.jpg",
+            "City": "Paris",
+            "Country": "France"
         },
         {
             "id": 3,
-            "name": "Johnathon Smith"
+            "name": "Johnathon Smith",
+            "intro": "I am a Data Engineer",
+            "image": "https://res.cloudinary.com/alexoc/image/upload/v1566550004/alexoc.jpg",
+            "City": "Paris",
+            "Country": "France"
         }
     ]
 }

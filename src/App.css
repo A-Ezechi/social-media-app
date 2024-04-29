@@ -209,6 +209,12 @@ button:hover{
   margin-left: -4rem;
 }
 
+.profileTitle{
+  font-size: xx-large;
+  font-weight: bolder;
+
+}
+
 /* FEED */
 
 .socialFeed{

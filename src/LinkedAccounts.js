@@ -26,10 +26,10 @@ const LinkedAccounts = () => {
         e.preventDefault()
         setCurrentAccount(e.target.value)
 
-// Look into implementing this handleAccoutChange function into the profile name rather than the current fetchName function
-
         console.log(`Current account: ${currentAccount}`)
     }
+
+// Look into implementing this handleAccoutChange function into the profile name rather than the current fetchName function
 
     useEffect(() => {
         fetchAccounts()
