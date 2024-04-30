@@ -4,7 +4,7 @@ import axios from 'axios'
 
 const FetchUser = () => {
     const [currentAccount, setCurrentAccount] = useState('')
-    const [userIntro, setUserIntro] = useState('testing');
+    const [userIntro, setUserIntro] = useState('');
     const [userCity, setUserCity] = useState('')
     const [userCountry, setUserCountry] = useState('')
 
@@ -26,10 +26,10 @@ const FetchUser = () => {
     }, [])
 
   return (
-    <div className='profileTitle'>
-        <h3>{currentAccount}</h3>
+    <div className='profile'>
+        <h3 className='profileTitle'>{currentAccount}</h3>
         <p>{userIntro}</p>
-        <div className='userInformation'>
+    <div className='userInformation'>
         {<p>City: {userCity}</p>}
         {<p>Country: {userCountry}</p>}
     </div>

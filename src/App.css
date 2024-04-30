@@ -212,7 +212,12 @@ button:hover{
 .profileTitle{
   font-size: xx-large;
   font-weight: bolder;
+}
 
+.profile{
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 /* FEED */
