@@ -50,7 +50,9 @@ const LinkedAccounts = () => {
                     <button 
                     onClick={handleAccountChange}
                     className='linkedAccountsName'
-                    >{account.name}</button>
+                    value={account.id}
+                    >{account.name}
+                    </button>
                 </div>
             </div>
         
