@@ -4,44 +4,11 @@ import axios from 'axios'
 import { Context } from './Context'
 
 const LinkedAccounts = () => {
-    // const [currentAccount, setCurrentAccount] = useState('')
-    // const [accounts, setAccounts] = useState([])
     const { accounts, handleAccountChange, fetchAccounts2 } = React.useContext(Context)
-
-
-    // const fetchAccounts2 = async () => {
-    //     try {
-    //       const response = await axios.get('/api/accounts.json');
-    //       const fetchedData = response.data;
-      
-    //       if (Array.isArray(fetchedData.linkedAccounts)) {
-    //         setAccounts(fetchedData.linkedAccounts);
-    //       } else {
-    //         console.error('Data fetched is not an array:', fetchedData);
-    //       }
-    //     } catch (error) {
-    //       console.error('Failed to fetch accounts:', error);
-    //     }
-    //   };
-
-
-    // const handleAccountChange = (e) => {
-    //     e.preventDefault()
-    //     setCurrentAccount(e.target.value)
-
-    //     console.log(`Current account: ${currentAccount}`)
-    // }
-
-// Look into implementing this handleAccoutChange function into the profile name
 
     useEffect(() => {
         fetchAccounts2()
     }, [])
-
-    // useEffect(() => {
-    //     console.log(`Current account: ${currentAccount}`);
-    //   }, [currentAccount]);
-
 
   return (
     <div className='linkedAccounts'>
