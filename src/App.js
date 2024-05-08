@@ -1,17 +1,17 @@
 import './App.css';
 import Content from './Content';
 import Header from './Header';
-// import { ContextProvider } from './Context';
+import { ContextProvider } from './Context';
 
 function App() {
 
   return (
-    // <ContextProvider>
+    <ContextProvider>
       <div className="App">
         <Header />
         <Content />
       </div>
-    // {/* </ContextProvider> */}
+    </ContextProvider>
   );
 }
 

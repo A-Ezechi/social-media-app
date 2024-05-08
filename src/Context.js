@@ -4,7 +4,7 @@ import { createContext, useState, useEffect } from 'react'
 
 const Context = createContext()
 
-const ContextProvider = ({}) => {
+const ContextProvider = ({children}) => {
 
 // Holds the current user account state
 
@@ -12,6 +12,7 @@ const ContextProvider = ({}) => {
     const [userIntro, setUserIntro] = useState('');
     const [userCity, setUserCity] = useState('')
     const [userCountry, setUserCountry] = useState('')
+    const [accounts, setAccounts] = useState([])
 
 // Used to Fetch the user account data
 
@@ -27,6 +28,23 @@ const ContextProvider = ({}) => {
           console.error('Failed to fetch account:', error);
       }
     }
+
+// Used to fetch the linked accounts data
+
+    const fetchAccounts2 = async () => {
+      try {
+        const response = await axios.get('/api/accounts.json');
+        const fetchedData = response.data;
+    
+        if (Array.isArray(fetchedData.linkedAccounts)) {
+          setAccounts(fetchedData.linkedAccounts);
+        } else {
+          console.error('Data fetched is not an array:', fetchedData);
+        }
+      } catch (error) {
+        console.error('Failed to fetch accounts:', error);
+      }
+    };
 
 // Used to handle the account change
 
@@ -50,11 +68,13 @@ const ContextProvider = ({}) => {
         currentAccount, 
         userIntro, 
         userCity, 
-        userCountry, 
+        userCountry,
+        accounts, 
         handleAccountChange,
-        fetchAccounts 
+        fetchAccounts,
+        fetchAccounts2
       }}>
-        {}
+        {children}
     </Context.Provider>
   )
 }

@@ -6,12 +6,10 @@ import { Context } from './Context'
 const LinkedAccounts = () => {
     // const [currentAccount, setCurrentAccount] = useState('')
     // const [accounts, setAccounts] = useState([])
-    const { handleAccountChange } = React.useContext(Context)
-    const { fetchAccounts } = React.useContext(Context)
-    const { accounts } = React.useContext(Context)
+    const { accounts, handleAccountChange, fetchAccounts2 } = React.useContext(Context)
 
 
-    // const fetchAccounts = async () => {
+    // const fetchAccounts2 = async () => {
     //     try {
     //       const response = await axios.get('/api/accounts.json');
     //       const fetchedData = response.data;
@@ -37,7 +35,7 @@ const LinkedAccounts = () => {
 // Look into implementing this handleAccoutChange function into the profile name
 
     useEffect(() => {
-        fetchAccounts()
+        fetchAccounts2()
     }, [])
 
     // useEffect(() => {
