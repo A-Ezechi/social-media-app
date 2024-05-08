@@ -1,13 +1,19 @@
 import React from 'react'
+import axios from 'axios'
 import { createContext, useState, useEffect } from 'react'
 
 const Context = createContext()
 
-const ContextProvider = ({ children }) => {
+const ContextProvider = ({}) => {
+
+// Holds the current user account state
+
     const [currentAccount, setCurrentAccount] = useState('')
     const [userIntro, setUserIntro] = useState('');
     const [userCity, setUserCity] = useState('')
     const [userCountry, setUserCountry] = useState('')
+
+// Used to Fetch the user account data
 
     const fetchAccounts = async () => {
       try {
@@ -22,15 +28,15 @@ const ContextProvider = ({ children }) => {
       }
     }
 
+// Used to handle the account change
+
     const handleAccountChange = (e) => {
       e.preventDefault()
       setCurrentAccount(e.target.value)
-
       console.log(`Current account: ${currentAccount}`)
   }
 
-
-
+// Allows the function to run on page load
 
   useEffect(() => {
       fetchAccounts()
@@ -39,10 +45,18 @@ const ContextProvider = ({ children }) => {
 
 
   return (
-    <Context.Provider value={{ currentAccount, userIntro, userCity, userCountry }}>
-        {children}
+    <Context.Provider 
+      value = {{ 
+        currentAccount, 
+        userIntro, 
+        userCity, 
+        userCountry, 
+        handleAccountChange,
+        fetchAccounts 
+      }}>
+        {}
     </Context.Provider>
   )
 }
 
-export default { ContextProvider, Context }
+export { ContextProvider, Context }

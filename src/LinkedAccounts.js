@@ -1,33 +1,38 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
 import axios from 'axios'
+import { Context } from './Context'
 
 const LinkedAccounts = () => {
-    const [currentAccount, setCurrentAccount] = useState('')
-    const [accounts, setAccounts] = useState([])
+    // const [currentAccount, setCurrentAccount] = useState('')
+    // const [accounts, setAccounts] = useState([])
+    const { handleAccountChange } = React.useContext(Context)
+    const { fetchAccounts } = React.useContext(Context)
+    const { accounts } = React.useContext(Context)
 
-    const fetchAccounts = async () => {
-        try {
-          const response = await axios.get('/api/accounts.json');
-          const fetchedData = response.data;
+
+    // const fetchAccounts = async () => {
+    //     try {
+    //       const response = await axios.get('/api/accounts.json');
+    //       const fetchedData = response.data;
       
-          if (Array.isArray(fetchedData.linkedAccounts)) {
-            setAccounts(fetchedData.linkedAccounts);
-          } else {
-            console.error('Data fetched is not an array:', fetchedData);
-          }
-        } catch (error) {
-          console.error('Failed to fetch accounts:', error);
-        }
-      };
+    //       if (Array.isArray(fetchedData.linkedAccounts)) {
+    //         setAccounts(fetchedData.linkedAccounts);
+    //       } else {
+    //         console.error('Data fetched is not an array:', fetchedData);
+    //       }
+    //     } catch (error) {
+    //       console.error('Failed to fetch accounts:', error);
+    //     }
+    //   };
 
 
-    const handleAccountChange = (e) => {
-        e.preventDefault()
-        setCurrentAccount(e.target.value)
+    // const handleAccountChange = (e) => {
+    //     e.preventDefault()
+    //     setCurrentAccount(e.target.value)
 
-        console.log(`Current account: ${currentAccount}`)
-    }
+    //     console.log(`Current account: ${currentAccount}`)
+    // }
 
 // Look into implementing this handleAccoutChange function into the profile name
 
@@ -35,9 +40,9 @@ const LinkedAccounts = () => {
         fetchAccounts()
     }, [])
 
-    useEffect(() => {
-        console.log(`Current account: ${currentAccount}`);
-      }, [currentAccount]);
+    // useEffect(() => {
+    //     console.log(`Current account: ${currentAccount}`);
+    //   }, [currentAccount]);
 
 
   return (
