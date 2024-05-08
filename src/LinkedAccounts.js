@@ -1,6 +1,5 @@
 import React from 'react'
-import { useState, useEffect } from 'react'
-import axios from 'axios'
+import { useEffect } from 'react'
 import { Context } from './Context'
 
 const LinkedAccounts = () => {

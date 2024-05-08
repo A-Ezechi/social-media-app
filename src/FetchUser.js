@@ -1,25 +1,9 @@
 import React from 'react'
-import { useState, useEffect } from 'react'
-import axios from 'axios'
+import { useEffect } from 'react'
+import { Context } from './Context'
 
 const FetchUser = () => {
-    const [currentAccount, setCurrentAccount] = useState('')
-    const [userIntro, setUserIntro] = useState('');
-    const [userCity, setUserCity] = useState('')
-    const [userCountry, setUserCountry] = useState('')
-
-    const fetchAccounts = async () => {
-        try {
-            const response = await axios.get('/api/accounts.json');
-            const fetchedData = response.data.linkedAccounts[0];
-            setCurrentAccount(fetchedData.name);
-            setUserIntro(fetchedData.intro);
-            setUserCity(fetchedData.City);
-            setUserCountry(fetchedData.Country);
-        } catch (error) {
-            console.error('Failed to fetch account:', error);
-        }
-    }
+    const { currentAccount, userIntro, userCity, userCountry, fetchAccounts } = React.useContext(Context)
 
     useEffect(() => {
         fetchAccounts()
