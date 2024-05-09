@@ -1,5 +1,6 @@
 import React from 'react'
 import LinkedAccounts from './LinkedAccounts'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Links = () => {
     
@@ -8,12 +9,12 @@ const Links = () => {
         <nav className="linksNavigation">
             <a href="" className='links'>&#xf09e; Feed</a>
             <a href="" className='links'>&#xf075;Chats</a>
-            <a href="" className='links'>Groups</a>
-            <a href="" className='links'>Saved</a>
-            <a href="" className='links'>Store</a>
-            <a href="" className='links'>Jobs</a>
-            <a href="" className='links'>Events</a>
-            <button className='editButton'>Edit</button>
+            <a href="" className='links'><FontAwesomeIcon icon="fa-solid fa-user-group" style={{color: "#74C0FC",}} />Groups</a>
+            <a href="" className='links'><FontAwesomeIcon icon="fa-solid fa-bookmark" style={{color: "#74C0FC",}} />Saved</a>
+            <a href="" className='links'><FontAwesomeIcon icon="fa-solid fa-store" style={{color: "#74C0FC",}} />Store</a>
+            <a href="" className='links'><FontAwesomeIcon icon="fa-solid fa-user-doctor" style={{color: "#74C0FC",}} />Jobs</a>
+            <a href="" className='links'><FontAwesomeIcon icon="fa-solid fa-champagne-glasses" />Events</a>
+            <button className='editButton'><FontAwesomeIcon icon="fa-solid fa-pen-to-square" />Edit</button>
         </nav>
 
         <div className="linksLine"></div>

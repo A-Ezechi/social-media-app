@@ -1,10 +1,12 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
 import axios from 'axios'
+import { Context } from './Context'
 
 const SocialFeed = () => {
   const [newPost, setNewPost] = useState([])
   const [displayPosts, setdisplayPosts] = useState([])
+  const { currentAccount } = React.useContext(Context)
 
 // Fetching posts from the server
 
@@ -26,13 +28,10 @@ const SocialFeed = () => {
     e.preventDefault();
 
      if (post.length > 0)
-      {updatedPosts.unshift({name: 'Alex Ezechi', post: post})
+      {updatedPosts.unshift({name: currentAccount, post: post})
         setdisplayPosts(updatedPosts);
         setNewPost('');
       } else { alert('Post cannot be empty!');}
-
-// Make it so that the post first gets the users ID and then renders the name based on the users ID
-// This will then be changeable based on the user's ID from the connectedAccounts
 
     console.log(`Publishing post: ${post}`);
     console.log(displayPosts);

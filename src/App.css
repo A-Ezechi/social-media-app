@@ -306,6 +306,7 @@ button:hover{
 .newFeed{
   display: flex;
   flex-direction: column;
+  text-wrap: wrap;
   gap: 0.5rem;
   border: 1px solid black;
   box-shadow: 1px 1px 2px;
