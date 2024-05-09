@@ -212,11 +212,18 @@ button:hover{
 .profileTitle{
   font-size: xx-large;
   font-weight: bolder;
+  text-align: center;
+}
+
+.profileTitle, .userIntro{
+  padding-right: 3rem;
 }
 
 .profile{
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   gap: 0.5rem;
 }
 

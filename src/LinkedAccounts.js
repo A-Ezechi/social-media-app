@@ -17,7 +17,7 @@ const LinkedAccounts = () => {
                 <div className='connectedAccountsContainer1' key={account.id}>
                     <div className="linkedAccountsImg"></div>
                     <button 
-                    onClick={handleAccountChange}
+                    onClick={() => handleAccountChange(account.id)}
                     className='linkedAccountsName'
                     value={account.id}
                     >{account.name}

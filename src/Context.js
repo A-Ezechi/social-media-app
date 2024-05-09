@@ -13,6 +13,7 @@ const ContextProvider = ({children}) => {
     const [userCity, setUserCity] = useState('')
     const [userCountry, setUserCountry] = useState('')
     const [accounts, setAccounts] = useState([])
+    const [currentAccountId, setCurrentAccountId] = useState(null);
 
 // Used to Fetch the user account data
 
@@ -20,6 +21,7 @@ const ContextProvider = ({children}) => {
       try {
           const response = await axios.get('/api/accounts.json');
           const fetchedData = response.data.linkedAccounts[0];
+          setCurrentAccountId(fetchedData);
           setCurrentAccount(fetchedData.name);
           setUserIntro(fetchedData.intro);
           setUserCity(fetchedData.City);
@@ -48,9 +50,13 @@ const ContextProvider = ({children}) => {
 
 // Used to handle the account change
 
-    const handleAccountChange = (e) => {
-      e.preventDefault()
-      setCurrentAccount(e.target.value)
+    const handleAccountChange = (accountId) => {
+      const selectedAccount = accounts.find(account => account.id === accountId);
+      setCurrentAccount(selectedAccount.name);
+      setUserIntro(selectedAccount.intro);
+      setUserCity(selectedAccount.City);
+      setUserCountry(selectedAccount.Country);
+      
       console.log(`Current account: ${currentAccount}`)
   }
 
@@ -72,7 +78,8 @@ const ContextProvider = ({children}) => {
         accounts, 
         handleAccountChange,
         fetchAccounts,
-        fetchAccounts2
+        fetchAccounts2,
+        currentAccountId
       }}>
         {children}
     </Context.Provider>
@@ -80,3 +87,8 @@ const ContextProvider = ({children}) => {
 }
 
 export { ContextProvider, Context }
+
+
+// Step 1: Store value of the current accountID in a state variable that can be changed on command with the handleAccountChange function.
+// Step 2: Make the userProfile component update based on the current accountID, displaying the linked name, intro, city, and country.
+// Step 3: Do the same for the SocialFeed component so you can post from different accounts.

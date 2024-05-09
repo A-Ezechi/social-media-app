@@ -12,7 +12,7 @@ const FetchUser = () => {
   return (
     <div className='profile'>
         <h3 className='profileTitle'>{currentAccount}</h3>
-        <p>{userIntro}</p>
+        <p className='userIntro'>{userIntro}</p>
     <div className='userInformation'>
         {<p>City: {userCity}</p>}
         {<p>Country: {userCountry}</p>}

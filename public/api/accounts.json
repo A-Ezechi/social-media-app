@@ -18,8 +18,8 @@
         },
         {
             "id": 3,
-            "name": "Johnathon Smith",
-            "intro": "I am a Data Engineer",
+            "name": "Kevin Ace",
+            "intro": "I am a Network Engineer",
             "image": "https://res.cloudinary.com/alexoc/image/upload/v1566550004/alexoc.jpg",
             "City": "Paris",
             "Country": "France"
