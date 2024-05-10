@@ -57,10 +57,10 @@
 .requests, .messages, .alerts{
   width: 35px;
   height: 35px;
-  font-size: larger;
+  font-size: 25px;
   color: white;
   background-color: transparent;
-  box-shadow: 1px 1px 1px black;
+  border: none;
 }
 
 .filteredResults{
