@@ -19,6 +19,8 @@
 .headerTitle{
   margin-right: 20rem;
   font-size: 40px;
+  color: white;
+  letter-spacing: 1px;
 }
 
 .searchBox{
@@ -53,8 +55,12 @@
 }
 
 .requests, .messages, .alerts{
-  width: 30px;
-  height: 30px;
+  width: 35px;
+  height: 35px;
+  font-size: larger;
+  color: white;
+  background-color: transparent;
+  box-shadow: 1px 1px 1px black;
 }
 
 .filteredResults{
@@ -126,7 +132,7 @@ button:hover{
   display: flex;
   flex-direction: column;
   background-color: white;
-  gap: 3rem;
+  gap: 1rem;
   padding: 2rem;
   width: 20vw;
   font-size: larger;
@@ -161,11 +167,15 @@ button:hover{
 .links{
   text-decoration: none;
   color: black;
+  height: 60px;
+  width: 100%;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
 }
 
 .links:hover{
-  background-color: rgb(0, 132, 255);
-  color: white;
+  background-color: rgba(245, 245, 245, 0.852);
 }
 
 /* PROFILE */
@@ -186,6 +196,9 @@ button:hover{
   border: 1px solid black;
   margin-top: -8rem;
   background-color: whitesmoke;
+  background-image: url(/public/img/AE\ profile.avif);
+  background-position: center;
+  background-size: 100% 100%;
 }
 
 .profileImageContainer{
@@ -281,14 +294,14 @@ button:hover{
 }
 
 .post{
-  width: 100px;
+  width: 120px;
   height: 40px;
   border-radius: 10px;
   background-color: rgb(2, 131, 58);
   font-size: medium;
   color: whitesmoke;
   font-weight: bolder;
-  margin-left: 4rem;
+  margin-left: 1rem;
 }
 
 .postsFeed{
@@ -311,6 +324,16 @@ button:hover{
   border: 1px solid black;
   box-shadow: 1px 1px 2px;
   padding: 10px;
+}
+
+.socialLinks{
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: center;
+  font-weight: bold;
+  color: black;
+
 }
 
 /* ACCOUNTS */
@@ -391,5 +414,3 @@ button:hover{
 .connectedAccountsOuterContainer1:hover{
   background-color: rgba(245, 245, 245, 0.852);
 }
-
-/* GIVE IT A 3D BUTTON EFFECT */

@@ -1,5 +1,8 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBell, faComments, faPerson } from '@fortawesome/free-solid-svg-icons';
+
 
 const Header = () => {
     const [search, setSearch] = useState('');
@@ -53,7 +56,7 @@ const Header = () => {
         <div className='headerContainer'>
             <h1 className='headerTitle'>ConnectSocial</h1>
             <form onSubmit={(e) => e.preventDefault()}>
-                <button
+                {/* <button
                     className='searchButton'
                     onClick={() => {
                         fetchUsers();
@@ -61,7 +64,7 @@ const Header = () => {
                     }}
                 >
                     &#128269;
-                </button>
+                </button> */}
                 <input
                     type="text"
                     id='searchText'
@@ -76,9 +79,9 @@ const Header = () => {
                 <a href="">Timeline</a>
             </nav>
             <div className="notifications">
-                <button className='requests'></button>
-                <button className='messages'></button>
-                <button className='alerts'></button>
+                <button className='requests'><FontAwesomeIcon icon={faPerson}/></button>
+                <button className='messages'><FontAwesomeIcon icon={faComments} /></button>
+                <button className='alerts'><FontAwesomeIcon icon={faBell} /></button>
             </div>
             {searchResults()}
         </div>

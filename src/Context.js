@@ -87,8 +87,3 @@ const ContextProvider = ({children}) => {
 }
 
 export { ContextProvider, Context }
-
-
-// Step 1: Store value of the current accountID in a state variable that can be changed on command with the handleAccountChange function.
-// Step 2: Make the userProfile component update based on the current accountID, displaying the linked name, intro, city, and country.
-// Step 3: Do the same for the SocialFeed component so you can post from different accounts.

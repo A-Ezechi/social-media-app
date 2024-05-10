@@ -2,6 +2,8 @@ import React from 'react'
 import { useState, useEffect } from 'react'
 import axios from 'axios'
 import { Context } from './Context'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPhotoFilm, faTag, faMedal, faClipboard } from '@fortawesome/free-solid-svg-icons';
 
 const SocialFeed = () => {
   const [newPost, setNewPost] = useState([])
@@ -63,10 +65,10 @@ const SocialFeed = () => {
                   </div>
               </div>
               <nav className="uploadLinks">
-                  <a href="">Photos or Video</a>
-                  <a href="">Tag Friends</a>
-                  <a href="">Feeling/Activity</a>
-                  <a href="">LinkedIn</a>
+                  <a href="" className='socialLinks'><FontAwesomeIcon icon={faPhotoFilm} style={{color: "#B197FC",}} /> Photos or Video</a>
+                  <a href="" className='socialLinks'><FontAwesomeIcon icon={faTag} style={{color: "#ffc800",}} /> Tag Friends</a>
+                  <a href="" className='socialLinks'><FontAwesomeIcon icon={faMedal} style={{color: "#ff0026",}} /> Feeling/Activity</a>
+                  <a href="" className='socialLinks'><FontAwesomeIcon icon={faClipboard} style={{color: "#0091ff",}} /> LinkedIn</a>
                   <button className="post"
                   onClick={handleSubmit}
                   
