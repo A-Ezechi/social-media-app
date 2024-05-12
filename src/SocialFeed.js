@@ -8,7 +8,7 @@ import { faPhotoFilm, faTag, faMedal, faClipboard } from '@fortawesome/free-soli
 const SocialFeed = () => {
   const [newPost, setNewPost] = useState([])
   const [displayPosts, setdisplayPosts] = useState([])
-  const { currentAccount } = React.useContext(Context)
+  const { currentAccount, currentAccountID } = React.useContext(Context)
 
 // Fetching posts from the server
 
@@ -52,7 +52,8 @@ const SocialFeed = () => {
     <div className="socialOuterContainer">
       <div className='socialFeed'>
               <div className="newPostContainer">
-                  <div className="newPostImage"></div>
+                  <div className="newPostImage">
+                  </div>
                   <div className="newPostText">
                   <form action="">
                       <input type="text" 
