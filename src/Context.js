@@ -13,7 +13,8 @@ const ContextProvider = ({children}) => {
     const [userCity, setUserCity] = useState('')
     const [userCountry, setUserCountry] = useState('')
     const [accounts, setAccounts] = useState([])
-    const [currentAccountId, setCurrentAccountId] = useState(null);
+    const [currentAccountId, setCurrentAccountId] = useState({});
+    const [userImage, setUserImage] = useState('')
 
 // Used to Fetch the user account data
 
@@ -26,6 +27,7 @@ const ContextProvider = ({children}) => {
           setUserIntro(fetchedData.intro);
           setUserCity(fetchedData.City);
           setUserCountry(fetchedData.Country);
+          setUserImage(fetchedData.image);
       } catch (error) {
           console.error('Failed to fetch account:', error);
       }
@@ -56,6 +58,7 @@ const ContextProvider = ({children}) => {
       setUserIntro(selectedAccount.intro);
       setUserCity(selectedAccount.City);
       setUserCountry(selectedAccount.Country);
+      setUserImage(selectedAccount.image);
       
       console.log(`Current account: ${currentAccount}`)
   }
@@ -79,7 +82,8 @@ const ContextProvider = ({children}) => {
         handleAccountChange,
         fetchAccounts,
         fetchAccounts2,
-        currentAccountId
+        currentAccountId,
+        userImage
       }}>
         {children}
     </Context.Provider>

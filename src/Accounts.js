@@ -23,7 +23,15 @@ const Accounts = () => {
       {accounts.map((account, index) => (
         <div key={index} className='connectedAccounts'>
         <div className="innerAccountsContainer">
-            <button className="newPostImage">{account.name}</button>
+            <button className="newPostImage" 
+
+            style={{
+              backgroundImage: `url(${account.image})`,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+            }}
+            
+            ></button>
             <h2>{account.name}</h2>
           </div>
         </div>

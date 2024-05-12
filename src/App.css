@@ -145,7 +145,9 @@ button:hover{
   border: none;
   font-size: large;
   font-weight: bold;
-  box-shadow: 1px 1px 2px
+  box-shadow: 1px 1px 2px;
+  background-color: rgb(0, 132, 255);
+  color: white;
 }
 
 .linksLine{

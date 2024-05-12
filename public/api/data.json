@@ -5,7 +5,7 @@
             "id": 1,
             "name": "Alex Ezechi",
             "intro": "I am a Web developer",
-            "image": "https://res.cloudinary.com/alexoc/image/upload/v1566550004/alexoc.jpg",
+            "image": "img/AEprofile.avif",
             "City": "London",
             "Country": "United Kingdom"
         },
@@ -14,7 +14,7 @@
             "id": 2,
             "name": "John Doe",
             "intro": "I am a Software Engineer",
-            "image": "https://res.cloudinary.com/alexoc/image/upload/v1566550004/alexoc.jpg",
+            "image": "img/JohnDoeProfile.avif",
             "City": "New York",
             "Country": "United States"
         },
@@ -23,7 +23,7 @@
             "id": 3,
             "name": "Jack Cullinghan",
             "intro": "I am a Doctor",
-            "image": "https://res.cloudinary.com/alexoc/image/upload/v1566550004/alexoc.jpg",
+            "image": "img/jackCullinghamProfile.jpeg",
             "City": "Paris",
             "Country": "France"
         },
@@ -32,16 +32,16 @@
             "id": 4,
             "name": "Chris Brown",
             "intro": "I am a Business Analyst",
-            "image": "https://res.cloudinary.com/alexoc/image/upload/v1566550004/alexoc.jpg",
+            "image": "img/chrisBrownProfile.jpeg",
             "City": "Paris",
             "Country": "France"
         },
 
         {
             "id": 5,
-            "name": "Jay Jay Okocha",
+            "name": "Jay James",
             "intro": "I am a DevOps Engineer",
-            "image": "https://res.cloudinary.com/alexoc/image/upload/v1566550004/alexoc.jpg",
+            "image": "img/jayJamesProfile.avif",
             "City": "Paris",
             "Country": "France"
         },
@@ -50,7 +50,7 @@
             "id": 6,
             "name": "Jane Rexon",
             "intro": "I am a Lawyer",
-            "image": "https://res.cloudinary.com/alexoc/image/upload/v1566550004/alexoc.jpg",
+            "image": "img/janeRexonProfile.avif",
             "City": "Paris",
             "Country": "France"
         },
@@ -59,7 +59,7 @@
             "id": 7,
             "name": "Chloe Smith",
             "intro": "I am a Data Engineer",
-            "image": "https://res.cloudinary.com/alexoc/image/upload/v1566550004/alexoc.jpg",
+            "image": "img/chloeSmithProfile.png",
             "City": "Paris",
             "Country": "France"
         },
@@ -68,7 +68,7 @@
             "id": 8,
             "name": "Cindy Brown",
             "intro": "I am a Claims Officer",
-            "image": "https://res.cloudinary.com/alexoc/image/upload/v1566550004/alexoc.jpg",
+            "image": "img/CBprofile.webp",
             "City": "Paris",
             "Country": "France"
         }

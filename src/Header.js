@@ -1,12 +1,15 @@
 import { useState, useEffect } from 'react';
+import React from 'react';
 import axios from 'axios';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBell, faComments, faPerson } from '@fortawesome/free-solid-svg-icons';
+import { Context } from './Context';
 
 
 const Header = () => {
     const [search, setSearch] = useState('');
     const [users, setUsers] = useState([]);
+    const {userImage} = React.useContext(Context);
 
 // Fetches the users from the API
 
@@ -35,7 +38,12 @@ const Header = () => {
                 {filteredUsers.length > 0 ? (
                     filteredUsers.map(user => (
                         <div key={user.id} className='foundAccounts'>
-                            <button className="filteredImage">{user.name}</button>
+                            <button className="filteredImage" 
+                                style={{backgroundImage: `url(${user.image})`,
+                                backgroundPosition: 'center',
+                                backgroundSize: '100% 100%'
+                                }}
+                            ></button>
                             <h2 className='filteredName'>{user.name}</h2>
                         </div>
                     ))
