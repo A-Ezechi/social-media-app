@@ -18,7 +18,7 @@ const SocialFeed = () => {
       const response = await axios.get('/api/posts.json')
       setdisplayPosts(response.data.posts)
     } catch (error) {
-      console.log(`Failed to load posts: ${error}`)
+      console.log(error)
     }
   }
 
@@ -34,10 +34,6 @@ const SocialFeed = () => {
         setdisplayPosts(updatedPosts);
         setNewPost('');
       } else { alert('Post cannot be empty!');}
-
-    console.log(`Publishing post: ${post}`);
-    console.log(displayPosts);
-    console.log(newPost);
   }
 
 // Using the useEffect hook to fetch posts from the server when the component mounts

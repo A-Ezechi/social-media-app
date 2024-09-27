@@ -3,32 +3,24 @@ import React from 'react';
 import axios from 'axios';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBell, faComments, faPerson } from '@fortawesome/free-solid-svg-icons';
-import { Context } from './Context';
+import { search, setSearch} from "./Components/SearchForUser";
 
 
-const Header = () => {
-    const [search, setSearch] = useState('');
+
+const Header = ({search, setSearch}) => {
     const [users, setUsers] = useState([]);
-    const {userImage} = React.useContext(Context);
+    const DATA_API = '/api/data.json';
 
 // Fetches the users from the API
 
-    const fetchUsers = async () => {
+    const fetchData = async () => {
         try {
-            const results = await axios.get('/api/data.json');
+            const results = await axios.get(DATA_API);
             setUsers(results.data.users);
         } catch (error) {
             console.error('Error fetching users:', error);
         }
     };
-
-// Searches for the users in the API and returns nothing if the search is empty
-
-    const searchResults = () => {
-        console.log(`Searching for ${search}...`);
-        if (!search.trim()) {
-            return null;
-        }
 
 // Filters the users based on the search input and returns the users that match the search
 
@@ -57,7 +49,7 @@ const Header = () => {
 // Fetches the users when the page loads
 
     useEffect(() => {
-        fetchUsers();
+        fetchData();
     }, []);
 
     return (
@@ -94,6 +86,6 @@ const Header = () => {
             {searchResults()}
         </div>
     );
-};
+
 
 export default Header;
