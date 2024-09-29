@@ -3,18 +3,21 @@ import Content from './Content';
 import Header from './Header';
 import { ContextProvider } from './Context';
 import UsersProvider from './API/FetchData';
+import FilteredUsersProvider from './Components/FilteredUsers';
 
 function App() {
 
   return (
-    <ContextProvider>
-      <UsersProvider>
-      <div className="App">
-        <Header />
-        <Content />
-      </div>
-      </UsersProvider>
-    </ContextProvider>
+    <FilteredUsersProvider>
+      <ContextProvider>
+        <UsersProvider>
+        <div className="App">
+          <Header />
+          <Content />
+        </div>
+        </UsersProvider>
+      </ContextProvider>
+    </FilteredUsersProvider>
   );
 }
 
