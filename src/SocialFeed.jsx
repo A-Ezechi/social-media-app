@@ -1,47 +1,19 @@
 import React from 'react'
-import { useState, useEffect } from 'react'
-import axios from 'axios'
-import { Context } from './Context'
+import { useState, useEffect, useContext } from 'react'
+import DeletePost from './Components/DeletePost'
+import {useFetchPosts} from './Components/FetchPosts'
+import UseHandleSubmit from './Components/UseHandleSubmit'
+import { StateContext } from './Contexts/StateContext'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPhotoFilm, faTag, faMedal, faClipboard } from '@fortawesome/free-solid-svg-icons';
 
 const SocialFeed = () => {
   const [newPost, setNewPost] = useState([])
-  const [displayPosts, setdisplayPosts] = useState([])
-  const { currentAccount, userImage } = React.useContext(Context)
+  const { displayPosts, setDisplayPosts, currentAccount, userImage } = useContext(StateContext)
 
 // Fetching posts from the server
 
-  const FetchPosts = async () => {
-
-    try{
-      const response = await axios.get('/api/posts.json')
-      setdisplayPosts(response.data.posts)
-    } catch (error) {
-      console.log(error)
-    }
-  }
-
-// Posting new posts to the server by creating a new post array and updating the displayPosts state
-
-  const handleSubmit = (e) => {
-    const post = newPost;
-    const updatedPosts = [...displayPosts];
-    e.preventDefault();
-
-     if (post.length > 0)
-      {updatedPosts.unshift({name: currentAccount, post: post})
-        setdisplayPosts(updatedPosts);
-        setNewPost('');
-      } else { alert('Post cannot be empty!');}
-  }
-
-// Using the useEffect hook to fetch posts from the server when the component mounts
-
-  useEffect(() => {
-    FetchPosts()
-  }, [])
-  
+useFetchPosts(setDisplayPosts)
 
 
   return (
@@ -51,7 +23,7 @@ const SocialFeed = () => {
               <div 
                   className="newPostImage"
                   style={{ 
-                    backgroundImage: currentAccount ? `url(${userImage})` : 'none',
+                    backgroundImage: currentAccount ? `url(${userImage})` : 'url(https://via.placeholder.com/150)',
                     backgroundPosition: 'center',
                     backgroundSize: 'cover'
                   }}
@@ -72,10 +44,7 @@ const SocialFeed = () => {
                   <a href="" className='socialLinks'><FontAwesomeIcon icon={faTag} style={{color: "#ffc800",}} /> Tag Friends</a>
                   <a href="" className='socialLinks'><FontAwesomeIcon icon={faMedal} style={{color: "#ff0026",}} /> Feeling/Activity</a>
                   <a href="" className='socialLinks'><FontAwesomeIcon icon={faClipboard} style={{color: "#0091ff",}} /> LinkedIn</a>
-                  <button className="post"
-                  onClick={handleSubmit}
-                  
-                  >Post</button>
+                  <UseHandleSubmit />
               </nav>
       </div>
 
@@ -92,5 +61,6 @@ const SocialFeed = () => {
     </div>
   )
 }
+
 
 export default SocialFeed

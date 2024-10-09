@@ -1,12 +1,16 @@
--- Allow dynamic mapping to search function so if search includes "Jam" any user with Jam in their name will be found.
+-- Allow dynamic mapping to search function so if search includes "Jam" any user with Jam in their name will be found. DONE
 
 -- Fix design flaw allowing PostFeed container to overflow.
 
 -- Add DELETE Function to satisfy CRUD requirements. ...Link to Database using EntityFramework
-
+    -Change SocialFeed to a context
+    - Inject displayPosts state into Delete component
+    - DisplayPosts is an array
+    - Look into giving the posts unique id's and making delete function delete based on id?
 -- Add Edit function to satisfy CRUD requirements. Logged in user MUST only be able to edit their own posts and not be able to  edit any other posts ...Link to Database using EntityFramework
 
 -- Create Login/Register page ...Link to Database using EntityFramework
 
+-- Create a state context and amend how the state is being passed into the Header component. This should resolve the error.
 
-
+-- Adhere to SRP (Single responsibility Principle)

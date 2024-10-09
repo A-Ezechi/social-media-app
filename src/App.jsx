@@ -3,21 +3,21 @@ import Content from './Content';
 import Header from './Header';
 import { ContextProvider } from './Context';
 import UsersProvider from './API/FetchData';
-import FilteredUsersProvider from './Components/FilteredUsers';
+import { StateProvider } from './Contexts/StateContext';
 
 function App() {
 
   return (
-    <FilteredUsersProvider>
       <ContextProvider>
         <UsersProvider>
+        <StateProvider>
         <div className="App">
           <Header />
           <Content />
         </div>
+        </StateProvider>
         </UsersProvider>
       </ContextProvider>
-    </FilteredUsersProvider>
   );
 }
 

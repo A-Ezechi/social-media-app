@@ -75,13 +75,13 @@
 
 .filteredResults{
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   gap: 1rem;
   position: absolute;
-  left: 37vw;
+  left: 45vw;
   top: 7vh;
   background-color: rgba(255, 255, 255, 0.874);
-  width: 30vw;
+  width: 20vw;
   border: 1px solid black;
   padding: 1rem;
   z-index: 1;
@@ -89,7 +89,7 @@
 
 .foundAccounts{
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 1rem;

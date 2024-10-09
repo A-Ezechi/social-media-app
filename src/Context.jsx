@@ -60,7 +60,12 @@ const ContextProvider = ({children}) => {
       setUserCountry(selectedAccount.Country);
       setUserImage(selectedAccount.image);
       
-      console.log(`Current account: ${currentAccount}`)
+      if (currentAccount === selectedAccount.name) {
+        console.log(`Current account: ${currentAccount}`)
+      } else {
+        console.error('Failed to change account:', selectedAccount);
+      }
+      
   }
 
 // Allows the function to run on page load
