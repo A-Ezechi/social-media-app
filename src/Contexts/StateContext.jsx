@@ -1,8 +1,12 @@
-import React, { useState, createContext } from "react";
+import React, { useState, createContext, useEffect, useContext } from "react";
+import { FetchDataContext } from "../API/FetchData";
 
 const StateContext = createContext();
 
 const StateProvider = ({ children }) => {
+
+  const { fetchData } = useContext(FetchDataContext);
+
   const [search, setSearch] = useState('');
   const [accounts, setAccounts] = useState([]);
   const [newPost, setNewPost] = useState('');
@@ -14,6 +18,16 @@ const StateProvider = ({ children }) => {
   const [currentAccountId, setCurrentAccountId] = useState({});
   const [userImage, setUserImage] = useState('');
   const [isLoading, setIsLoading] = useState(false);
+
+  const data = useEffect(() => {
+    fetchData()},
+    []);
+
+    // if (data) {
+    //   console.log("Data retrieval successful");
+    // } else {
+    //   console.log("Data retrieval failed");
+    // }
 
   return (
     <StateContext.Provider

@@ -1,5 +1,5 @@
 import React from 'react'
-import ProfileName from './ProfileName'
+import FetchUser from './FetchUser'
 import { Context } from './Context'
 
 const Profile = () => {
@@ -16,7 +16,9 @@ const Profile = () => {
             backgroundSize: '100% 100%'
             }}
         ></div>
-        <ProfileName />    
+        <div className='profileName'>
+          <FetchUser />
+        </div>  
       </div>
     </div>
   )

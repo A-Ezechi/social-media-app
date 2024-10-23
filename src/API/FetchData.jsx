@@ -10,6 +10,9 @@ const UsersProvider = ({ children }) => {
     const fetchData = async () => {
         try {
             const results = await axios.get(DATA_API);
+            if (!results) {
+                window.alert('No results');
+            }
             setUsers(results.data.users);
         } catch (error) {
             console.error('Error fetching users:', error);

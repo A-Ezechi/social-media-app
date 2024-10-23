@@ -7,7 +7,8 @@
             "intro": "I am a Web developer",
             "image": "img/AEprofile.avif",
             "City": "London",
-            "Country": "United Kingdom"
+            "Country": "United Kingdom",
+            "LinkedAccount": 1
         },
 
         {
@@ -16,7 +17,9 @@
             "intro": "I am a Software Engineer",
             "image": "img/JohnDoeProfile.avif",
             "City": "New York",
-            "Country": "United States"
+            "Country": "United States",
+            "LinkedAccount": 0
+
         },
 
         {
@@ -25,7 +28,8 @@
             "intro": "I am a Doctor",
             "image": "img/jackCullinghamProfile.jpeg",
             "City": "Paris",
-            "Country": "France"
+            "Country": "France",
+            "LinkedAccount": 0
         },
 
         {
@@ -34,7 +38,8 @@
             "intro": "I am a Business Analyst",
             "image": "img/chrisBrownProfile.jpeg",
             "City": "Paris",
-            "Country": "France"
+            "Country": "France",
+            "LinkedAccount": 0
         },
 
         {
@@ -43,7 +48,8 @@
             "intro": "I am a DevOps Engineer",
             "image": "img/jayJamesProfile.avif",
             "City": "Paris",
-            "Country": "France"
+            "Country": "France",
+            "LinkedAccount": 0
         },
 
         {
@@ -52,7 +58,8 @@
             "intro": "I am a Lawyer",
             "image": "img/janeRexonProfile.avif",
             "City": "Paris",
-            "Country": "France"
+            "Country": "France",
+            "LinkedAccount": 0
         },
 
         {
@@ -61,7 +68,8 @@
             "intro": "I am a Data Engineer",
             "image": "img/chloeSmithProfile.png",
             "City": "Paris",
-            "Country": "France"
+            "Country": "France",
+            "LinkedAccount": 0
         },
         
         {
@@ -70,7 +78,19 @@
             "intro": "I am a Claims Officer",
             "image": "img/CBprofile.webp",
             "City": "Paris",
-            "Country": "France"
+            "Country": "France",
+            "LinkedAccount": 1
+        },
+
+        {
+            "id": 9,
+            "name": "Kevin Ace",
+            "intro": "I am a Network Engineer",
+            "image": "img/Kevz1AceProfile.avif",
+            "City": "Paris",
+            "Country": "France",
+            "LinkedAccount": 1
+
         }
     ]
 }

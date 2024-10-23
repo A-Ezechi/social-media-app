@@ -14,3 +14,14 @@
 -- Create a state context and amend how the state is being passed into the Header component. This should resolve the error.
 
 -- Adhere to SRP (Single responsibility Principle)
+
+
+
+Input button Design
+- On click of submit button, set the value into a state to hold it
+- Map over length of the state to see if it's more than 1
+- if > 1 : set state into new state array that holds feed
+- if less than 1 print "Cannot be empty"
+- 
+
+We've moved the state over however, we have not moved over the functions that set the States. Thus, the components are not having their states set and returning 0 or null.

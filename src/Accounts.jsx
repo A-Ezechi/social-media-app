@@ -1,26 +1,13 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import { useContext } from 'react';
+import { FetchDataContext } from './API/FetchData';
 
 const Accounts = () => {
-  const [accounts, setAccounts] = useState([]);
-
-  const fetchAccounts = async () => {
-    try {
-      const response = await axios.get('/api/data.json');
-      setAccounts(response.data.users);
-    } catch (error) {
-      console.error(error);
-    }
-  };
-
-  useEffect(() => {
-    fetchAccounts();
-  }, []);
+  const { users } = useContext(FetchDataContext);
 
   return (
     <div className='connectedAccountsContainer'>
         <h2 className='accountsHeader'>Online Friends</h2>
-      {accounts.map((account, index) => (
+        {users.map((account, index) => (
         <div key={index} className='connectedAccounts'>
         <div className="innerAccountsContainer">
             <button className="newPostImage" 

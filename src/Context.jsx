@@ -32,24 +32,6 @@ const ContextProvider = ({children}) => {
           console.error('Failed to fetch account:', error);
       }
     }
-
-// Used to fetch the linked accounts data
-
-    const fetchAccounts2 = async () => {
-      try {
-        const response = await axios.get('/api/accounts.json');
-        const fetchedData = response.data;
-    
-        if (Array.isArray(fetchedData.linkedAccounts)) {
-          setAccounts(fetchedData.linkedAccounts);
-        } else {
-          console.error('Data fetched is not an array:', fetchedData);
-        }
-      } catch (error) {
-        console.error('Failed to fetch accounts:', error);
-      }
-    };
-
 // Used to handle the account change
 
     const handleAccountChange = (accountId) => {
@@ -64,9 +46,8 @@ const ContextProvider = ({children}) => {
         console.log(`Current account: ${currentAccount}`)
       } else {
         console.error('Failed to change account:', selectedAccount);
-      }
-      
-  }
+      } 
+    }
 
 // Allows the function to run on page load
 
@@ -86,7 +67,6 @@ const ContextProvider = ({children}) => {
         accounts, 
         handleAccountChange,
         fetchAccounts,
-        fetchAccounts2,
         currentAccountId,
         userImage
       }}>

@@ -4,11 +4,13 @@ import Header from './Header';
 import { ContextProvider } from './Context';
 import UsersProvider from './API/FetchData';
 import { StateProvider } from './Contexts/StateContext';
+import FetchLinkedAccountsProvider from './API/FetchLinkedAccounts';
 
 function App() {
 
   return (
       <ContextProvider>
+        <FetchLinkedAccountsProvider>
         <UsersProvider>
         <StateProvider>
         <div className="App">
@@ -17,6 +19,7 @@ function App() {
         </div>
         </StateProvider>
         </UsersProvider>
+        </FetchLinkedAccountsProvider>
       </ContextProvider>
   );
 }

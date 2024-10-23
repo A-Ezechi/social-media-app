@@ -1,18 +1,20 @@
 import React from 'react'
-import { useContext } from 'react'
-import { FetchDataContext } from './API/FetchData'
+import { useEffect, useContext } from 'react'
+import { FetchLinkedAccountsContext } from './API/FetchLinkedAccounts'
 import UseHandleAccountChange from './Components/UseHandleAccountChange'
 
 const LinkedAccounts = () => {
-    const { users } = useContext(FetchDataContext)
+    const { accounts, fetchAccounts2 } = useContext(FetchLinkedAccountsContext)
     const { handleAccountChange } = UseHandleAccountChange()
+
+    useEffect(() => {
+        fetchAccounts2()
+    }, [])
 
     return (
         <div className='linkedAccounts'>
           <h3 className='linkedAccountsHeader'>Linked Accounts</h3>
-          {users.map((account) => 
-          account.LinkedAccount == 1 ?
-          (
+          {accounts.map((account) => (
             <div className="connectedAccountsOuterContainer1" key={account.id}>
               <div className='connectedAccountsContainer1'>
               <div className="linkedAccountsImg" style={{ 
@@ -29,7 +31,7 @@ const LinkedAccounts = () => {
                   </button>
               </div>
             </div>
-          ) : null)}     
+          ))}     
         </div>
       );
       
